@@ -1,0 +1,359 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  /* background-color: rgb(146, 133, 243); */
+  /* background-color: rgb(44, 2, 98); */
+  background: linear-gradient(135deg, #7b2cbf, #9d4edd, #ff6ad5);
+  padding-top: 100px;
+  /* background: linear-gradient(135deg, #6a0dad, #9d4edd, #c77dff); */
+
+  font-family: "Poppins", serif;
+  color: var(--white-soft);
+}
+.hide-item {
+  display: none;
+}
+.view-item-flex {
+  display: flex;
+}
+.view-item {
+  display: block;
+}
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 3;
+  color: white;
+  display: flex;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.173);
+  margin: 40px 20px;
+  border-radius: 20px;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.256);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  width: 70%;
+  justify-content: space-between;
+}
+nav ul li {
+  cursor: pointer;
+  transition: 0.3s;
+}
+nav ul li:hover {
+  color: rgba(179, 122, 228, 0.651);
+}
+.logo {
+  cursor: pointer;
+  width: 20%;
+  font-weight: 700;
+  text-align: center;
+  font-size: 40px;
+  font-family: "Leckerli One", cursive;
+}
+
+.container {
+  padding: 20px;
+}
+.landing-page {
+  display: flex;
+  gap: 30px;
+  margin-top: 100px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.daily-prayer {
+  margin: 20px;
+  background-color: rgba(255, 255, 255, 0.104);
+  color: white;
+  text-shadow: black;
+  text-align: center;
+  height: 100%;
+  backdrop-filter: blur(14px);
+}
+.devotion-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 18px;
+  padding: 32px;
+  max-width: 50%;
+  color: white;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.glass-btn {
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 14px;
+  padding: 14px 28px;
+  color: #fff;
+  font-size: 1rem;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  transition: all 0.35s ease;
+}
+
+.background-cross {
+  position: absolute;
+  height: 650px;
+  top: -60px;
+  z-index: -1;
+  left: -100px;
+  filter: blur(10px);
+  /* transform: rotate(-25deg); */
+  /* filter: brightness(-10); */
+}
+.background-cross2 {
+  position: absolute;
+  height: 400px;
+  top: 450px;
+  z-index: -1;
+  right: 0px;
+  /* transform: rotate(-25deg); */
+  /* filter: brightness(-10); */
+}
+.notification-box,
+.mobile-menu-box {
+  background-color: rgba(0, 0, 0, 0.42);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+}
+.notification {
+  position: relative;
+  width: 50%;
+  background-color: rgba(255, 255, 255, 0.15);
+  height: 50vh;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-radius: 14px;
+  color: rgb(236, 142, 244);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 40px;
+}
+.close-notification {
+  position: absolute;
+  top: 10px;
+  color: rgba(255, 255, 255, 0.805);
+  right: 15px;
+  font-size: 30px;
+  cursor: pointer;
+  font-weight: 400;
+}
+.join-us {
+  padding: 0px 20px;
+  margin-top: 100px;
+  color: rgb(204, 204, 204);
+  display: flex;
+}
+.write-ups {
+  width: 100%;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 25px;
+  font-size: 40px;
+  text-align: center;
+  font-weight: 700;
+  color: rgb(223, 221, 221);
+  border-radius: 14px;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 2s ease, opacity 1.5s ease;
+  opacity: 1;
+}
+
+.books-container {
+  display: none;
+  margin: 20px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.144);
+  backdrop-filter: blur(14px);
+  color: white;
+}
+.books-flex {
+  display: flex;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  overflow-x: auto;
+}
+.book-card {
+  border-radius: 10px;
+  max-width: 400px;
+  max-height: 800px;
+  background-color: rgba(58, 58, 58, 0.188);
+  backdrop-filter: blur(14px);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+.book-cover {
+  width: 100%;
+}
+.book-description {
+  font-size: 12px;
+  padding: 20px;
+  text-align: center;
+}
+.book-cover img {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  height: 300px;
+}
+
+.glass-btn:hover {
+  background: rgba(255, 255, 255, 0.24);
+  transform: translateY(-2px);
+}
+
+.glass-btn:active {
+  transform: scale(0.97);
+}
+
+.devotion-card h1 {
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.devotion-card p {
+  line-height: 1.7;
+  opacity: 0.9;
+}
+.glass-btn.glow {
+  box-shadow: 0 0 25px rgba(170, 140, 255, 0.45);
+}
+.mobile-background-cross,
+.mobile-background-cross2 {
+  display: none;
+}
+.hamburger {
+  display: none !important;
+}
+.mobile-menu-box {
+  display: none;
+}
+@media screen and (max-width: 700px) {
+  body {
+    padding-top: 70px;
+  }
+  .background-cross {
+    height: 400px;
+    display: none;
+  }
+  .background-cross2 {
+    position: fixed;
+    top: 250px;
+    filter: blur(5px);
+    right: -0;
+    height: 220px;
+  }
+  .hamburger {
+    display: block !important;
+    font-size: 30px;
+  }
+  .landing-page {
+    flex-direction: column-reverse;
+  }
+  nav {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    background-color: inherit;
+    border: none;
+    box-shadow: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav ul {
+    display: none;
+  }
+  .mobile-menu-box {
+    display: none;
+  }
+  .mobile-menu {
+    position: relative;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.15);
+    height: 50vh;
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    box-shadow: 0px 10px 40px rgb(41, 41, 41);
+  }
+  .close-menu {
+    font-size: 40px;
+    color: white;
+    position: absolute;
+    top: 55px;
+    right: 25px;
+  }
+  .mobile-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .mobile-menu ul li {
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    margin: 20px 0px;
+    color: rgb(222, 222, 222);
+  }
+  .mobile-menu ul li:active {
+    font-size: larger;
+  }
+  .devotion-card {
+    max-width: 80%;
+  }
+  .write-ups {
+    width: 80%;
+    height: 150px;
+    margin: 20px auto;
+    font-size: 32px;
+    font-weight: 800;
+  }
+  .container {
+    padding: 5px;
+  }
+  /* .background-cross,
+  .background-cross2 {
+    display: none;
+  } */
+  .mobile-background-cross {
+    display: none;
+    position: absolute;
+    /* display: block; */
+    height: 300px;
+  }
+  .join-us {
+    font-size: 14px;
+    margin: 0;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+}

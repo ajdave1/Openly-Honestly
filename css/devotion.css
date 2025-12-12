@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: rgba(238, 219, 255, 0.693);
+  color: rgb(255, 255, 255);
+  font-family: "Poppins", serif;
+  color: var(--white-soft);
+  padding-top: 40px;
+}
+.background-cross {
+  position: fixed;
+  top: 30px;
+  height: 700px;
+  display: flex;
+  justify-self: center;
+  z-index: -1;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+  gap: 20px;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(14px);
+  padding: 20px 10px;
+  vertical-align: center;
+  /* margin-bottom: 1px; */
+}
+
+.logo {
+  font-family: "Leckerli One", cursive;
+  cursor: pointer;
+  font-weight: 700;
+  text-align: center;
+  margin-right: 20px;
+  font-size: 25px;
+}
+.devotion {
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(14px);
+  padding: 20px;
+}
+.week-header {
+  background-color: rgb(38, 38, 38);
+  color: white;
+}
+.devotion-header {
+  display: flex;
+  padding: 20px 0px;
+  gap: 5px;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+}
+.topic {
+  background-color: rgb(90, 9, 167);
+  color: white;
+  font-size: 18px;
+}
+.devotion-header h1 {
+  background-color: gray;
+}
+.box {
+  padding: 5px 20px;
+  font-size: 18px;
+  position: relative;
+  clip-path: polygon(
+    12px 0,
+    calc(100% - 12px) 0,
+    100% 50%,
+    calc(100% - 12px) 100%,
+    12px 100%,
+    0 50%
+  );
+}
+.devotion-body {
+  padding: 0px 20px;
+  width: fit-content;
+  margin: 0;
+
+  padding: 10px 40px 1dvw 5px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.switch-mode,
+.back-home {
+  padding-top: 10px;
+  font-size: 25px;
+  cursor: pointer;
+}
+@media screen and (max-width: 700px) {
+  .devotion {
+    padding: 15px;
+    padding-top: 50px;
+  }
+  .box {
+    font-size: 14px;
+  }
+}
