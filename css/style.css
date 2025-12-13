@@ -1,14 +1,11 @@
 body {
   margin: 0;
   min-height: 100vh;
-  /* background-color: rgb(146, 133, 243); */
-  /* background-color: rgb(44, 2, 98); */
   background: linear-gradient(135deg, #7b2cbf, #9d4edd, #ff6ad5);
   padding-top: 100px;
-  /* background: linear-gradient(135deg, #6a0dad, #9d4edd, #c77dff); */
-
   font-family: "Poppins", serif;
   color: var(--white-soft);
+  padding-bottom: 100px;
 }
 .hide-item {
   display: none;
@@ -340,10 +337,7 @@ nav ul li:hover {
   .container {
     padding: 5px;
   }
-  /* .background-cross,
-  .background-cross2 {
-    display: none;
-  } */
+
   .mobile-background-cross {
     display: none;
     position: absolute;
