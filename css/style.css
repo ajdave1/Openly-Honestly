@@ -120,17 +120,17 @@ nav ul li:hover {
   /* transform: rotate(-25deg); */
   /* filter: brightness(-10); */
 }
-.notification-box,
-.mobile-menu-box {
+.notification-box {
   background-color: rgba(0, 0, 0, 0.42);
   position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
+  display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 3;
+  inset: 0;
+  /* transition: 0.3s ease-in-out; */
 }
+
 .notification {
   position: relative;
   width: 50%;
@@ -160,6 +160,8 @@ nav ul li:hover {
   margin-top: 100px;
   color: rgb(204, 204, 204);
   display: flex;
+  position: absolute;
+  bottom: 10px;
 }
 .write-ups {
   width: 100%;
@@ -270,6 +272,23 @@ nav ul li:hover {
   .landing-page {
     flex-direction: column-reverse;
   }
+  .notification-box {
+    right: 0;
+    left: 0;
+    top: 0;
+    height: 100px;
+    background-color: transparent;
+    z-index: 5;
+  }
+  .notification {
+    height: 70%;
+    width: 80%;
+    transition: 0.3s;
+    font-size: 20px;
+  }
+  .close-notification {
+    display: none;
+  }
   nav {
     position: fixed;
     right: 0;
@@ -286,22 +305,50 @@ nav ul li:hover {
     display: none;
   }
   .mobile-menu-box {
-    display: none;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.42);
+    position: fixed;
+    inset: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    /* transition: opacity 0.4s ease; */
   }
+
+  .mobile-menu-box.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
   .mobile-menu {
     position: relative;
     width: 90%;
-    background-color: rgba(255, 255, 255, 0.15);
     height: 50vh;
+    background-color: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
     border-radius: 14px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0;
+    /* opacity: 0; */
+    transform: translateY(-20px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
     box-shadow: 0px 10px 40px rgb(41, 41, 41);
+    outline: 3px solid rgb(204, 0, 255);
   }
+
+  .mobile-menu-box.active .mobile-menu {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
   .close-menu {
     font-size: 40px;
     color: white;
@@ -330,7 +377,7 @@ nav ul li:hover {
   .write-ups {
     width: 80%;
     height: 150px;
-    margin: 20px auto;
+    margin: 10px auto;
     font-size: 32px;
     font-weight: 800;
   }
@@ -345,9 +392,15 @@ nav ul li:hover {
     height: 300px;
   }
   .join-us {
-    font-size: 14px;
+    font-size: 12px;
     margin: 0;
+    bottom: 5px;
     flex-wrap: wrap;
+    right: 0;
+    left: 0;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

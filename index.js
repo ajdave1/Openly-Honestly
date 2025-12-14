@@ -27,16 +27,35 @@ function changeContent() {
   }, 1500); // matches the fade-out duration
 }
 setInterval(changeContent, 4000);
+const openMenu = document.querySelector(".hamburger");
+const closeMenu = document.querySelector(".close-menu");
+const menu = document.querySelector(".mobile-menu-box");
 const notificationBox = document.querySelector(".notification-box");
 document.querySelectorAll("ul li").forEach((btn) => {
   btn.addEventListener("click", () => {
     notificationBox.style = "display:flex";
-    // notificationBox.classList.remove("hide-item");
-    // notificationBox(".notification-box").classList.add("view-item-flex");
+    setTimeout(() => {
+      notificationBox.style = "display:none";
+    }, 1000);
   });
 });
 document.querySelector(".close-notification").addEventListener("click", () => {
   notificationBox.style = "display:none";
-  // notificationBox.classList.add("hide-item");
-  // notificationBox(".notification-box").classList.remove("view-item-flex");
+});
+
+openMenu.addEventListener("click", () => {
+  openMenu.classList.remove("bx-menu");
+  menu.classList.add("active");
+});
+
+closeMenu.addEventListener("click", () => {
+  openMenu.classList.add("bx-menu");
+  menu.classList.remove("active");
+});
+
+menu.addEventListener("click", (e) => {
+  if (e.target === menu) {
+    openMenu.classList.add("bx-menu");
+    menu.classList.remove("active");
+  }
 });

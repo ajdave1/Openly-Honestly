@@ -2,7 +2,7 @@ body {
   margin: 0;
   min-height: 100vh;
   background-color: rgba(238, 219, 255, 0.693);
-  color: rgb(255, 255, 255);
+
   font-family: "Poppins", serif;
   color: var(--white-soft);
   padding-top: 40px;
@@ -45,6 +45,9 @@ nav {
   backdrop-filter: blur(14px);
   padding: 20px;
 }
+.devotion-body {
+  width: 100%;
+}
 .week-header {
   background-color: rgb(38, 38, 38);
   color: white;
@@ -83,7 +86,7 @@ nav {
   width: fit-content;
   margin: 0;
 
-  padding: 10px 40px 1dvw 5px;
+  padding: 10px 10px 10px 5px;
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -93,12 +96,66 @@ nav {
   font-size: 25px;
   cursor: pointer;
 }
+.join-us {
+  padding: 0px 20px;
+  margin-top: 100px;
+  color: rgb(204, 204, 204);
+  display: flex;
+  padding-bottom: 5px;
+  bottom: 0;
+  color: rgba(0, 0, 0, 0.565);
+}
 @media screen and (max-width: 700px) {
+  nav {
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
   .devotion {
     padding: 15px;
     padding-top: 50px;
   }
   .box {
+    font-size: 16px;
+    padding: 8px 40px;
+  }
+  .devotion-header {
+    padding-top: 40px;
+    justify-content: center;
+  }
+  .week-theme h2,
+  .day-verse h2,
+  .reflection h2,
+  .prayer h2 {
+    font-size: 20px;
+  }
+  .day-verse h1 {
+    font-size: 22px !important;
+  }
+  .week-theme p,
+  .reflection,
+  .prayer {
     font-size: 14px;
+    text-align: center;
+  }
+  .join-us {
+    font-size: 12px;
+    margin: 0;
+    bottom: 5px;
+    flex-wrap: wrap;
+    right: 0;
+    left: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .background-cross {
+    top: 200px;
+    height: 600px;
+    filter: contrast(-10);
+    filter: blur(10px);
+  }
+  .devotion-body {
+    text-align: center;
   }
 }
