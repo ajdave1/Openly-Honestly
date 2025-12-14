@@ -44,6 +44,7 @@ document.querySelector(".close-notification").addEventListener("click", () => {
 });
 
 openMenu.addEventListener("click", () => {
+  window.alert("button - clicked");
   openMenu.classList.remove("bx-menu");
   menu.classList.add("active");
 });
