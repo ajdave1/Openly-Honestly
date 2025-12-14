@@ -1,7 +1,7 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background-color: rgba(238, 219, 255, 0.693);
+  background-color: rgb(243, 230, 255);
 
   font-family: "Poppins", serif;
   color: var(--white-soft);
@@ -14,6 +14,8 @@ body {
   display: flex;
   justify-self: center;
   z-index: -1;
+  filter: brightness(-5);
+  filter: blur(14px);
 }
 
 nav {
@@ -25,8 +27,7 @@ nav {
   align-items: center;
   z-index: 2;
   gap: 20px;
-  background-color: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(14px);
+  background-color: inherit;
   padding: 20px 10px;
   vertical-align: center;
   /* margin-bottom: 1px; */
@@ -41,8 +42,6 @@ nav {
   font-size: 25px;
 }
 .devotion {
-  background-color: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(14px);
   padding: 20px;
 }
 .devotion-body {
@@ -99,16 +98,21 @@ nav {
 .join-us {
   padding: 0px 20px;
   margin-top: 100px;
-  color: rgb(204, 204, 204);
+
   display: flex;
   padding-bottom: 5px;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(14px);
   bottom: 0;
   color: rgba(0, 0, 0, 0.565);
 }
 @media screen and (max-width: 700px) {
   nav {
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 40px 20px 20px 20px;
+  }
+  .logo {
+    font-size: 30px;
   }
   .devotion {
     padding: 15px;
@@ -153,9 +157,23 @@ nav {
     top: 200px;
     height: 600px;
     filter: contrast(-10);
-    filter: blur(10px);
+    filter: blur(20px);
   }
   .devotion-body {
     text-align: center;
   }
+}
+.notdevotion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px 40px;
+  flex-wrap: wrap;
+  height: 100vh;
+  vertical-align: center;
+}
+.notdevotion h1 {
+  font-size: 27px;
+  padding-top: 50px;
 }

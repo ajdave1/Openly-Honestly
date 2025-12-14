@@ -249,7 +249,7 @@ nav ul li:hover {
 .mobile-menu-box {
   display: none;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 980px) {
   body {
     padding-top: 70px;
   }
@@ -378,7 +378,7 @@ nav ul li:hover {
     height: 150px;
     margin: 10px auto;
     font-size: 32px;
-    font-weight: 800;
+    /* font-weight: 800; */
   }
   .container {
     padding: 5px;
