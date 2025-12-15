@@ -1,11 +1,26 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background-color: rgb(243, 230, 255);
 
   font-family: "Poppins", serif;
-  color: var(--white-soft);
+  color: rgb(188, 188, 188);
   padding-top: 40px;
+  transition: background 0.3s;
+}
+.dark-mode {
+  background-color: rgb(49, 3, 82);
+  .background-cross {
+    height: 400px;
+  }
+  .box {
+    color: rgb(191, 191, 191);
+  }
+}
+nav a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 20px;
+  font-weight: 600;
 }
 .background-cross {
   position: fixed;
@@ -17,7 +32,10 @@ body {
   filter: brightness(-5);
   filter: blur(14px);
 }
-
+.light-mode {
+  background-color: rgb(243, 230, 255);
+  color: black;
+}
 nav {
   position: fixed;
   top: 0;
@@ -98,13 +116,12 @@ nav {
 .join-us {
   padding: 0px 20px;
   margin-top: 100px;
-
   display: flex;
   padding-bottom: 5px;
   background-color: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(14px);
   bottom: 0;
-  color: rgba(0, 0, 0, 0.565);
+  color: inherit;
 }
 @media screen and (max-width: 700px) {
   nav {
@@ -137,7 +154,8 @@ nav {
   }
   .week-theme p,
   .reflection,
-  .prayer {
+  .prayer,
+  .challenge {
     font-size: 14px;
     text-align: center;
   }
