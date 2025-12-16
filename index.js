@@ -6,6 +6,10 @@ const messages = [
   "You are deeply loved more than you know.",
 ];
 
+fetch("https://www.scriptura-api.com/api/random")
+  .then((D) => D.json())
+  .then((d) => window.alert(d));
+
 const textBox = document.querySelector(".write-ups");
 let index = 0;
 let bgIndex = 0;
