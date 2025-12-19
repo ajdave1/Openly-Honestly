@@ -6,10 +6,26 @@ const messages = [
   "You are deeply loved more than you know.",
 ];
 
-fetch("https://www.scriptura-api.com/api/random")
-  .then((D) => D.json())
-  .then((d) => window.alert(d));
+async function getVerse() {
+  const res = await fetch(
+    "https://labs.bible.org/api/?passage=random&type=json"
+  );
+  const data = await res.json();
+  const v = data[0];
 
+  console.log(`${v.bookname} ${v.chapter}:${v.verse}`);
+  console.log(v.text);
+  verseOFtheDavy = {
+    book: v.bookname,
+    chapter: v.chapter,
+    verse: v.verse,
+    text: v.text,
+  };
+  ver;
+  JSONt.tringify(getVerse);
+}
+
+getVerse();
 const textBox = document.querySelector(".write-ups");
 let index = 0;
 let bgIndex = 0;
@@ -24,7 +40,7 @@ function changeContent() {
     index = (index + 1) % messages.length;
     textBox.textContent = messages[index];
 
-    // Change background
+    // Change backgroun
 
     // fade in
     textBox.style.opacity = 1;
