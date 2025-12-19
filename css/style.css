@@ -1,10 +1,10 @@
 body {
   margin: 0;
-  min-height: 100vh;
   background: linear-gradient(135deg, #7b2cbf, #9d4edd, #ff6ad5);
   padding-top: 100px;
   font-family: "Poppins", serif;
   color: var(--white-soft);
+  min-height: 100vh;
 }
 .hide-item {
   display: none;
@@ -299,6 +299,9 @@ nav ul li:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0;
+    border-radius: 0;
+    padding-top: 40px;
   }
   nav ul {
     display: none;

@@ -13,16 +13,20 @@ async function getVerse() {
   const data = await res.json();
   const v = data[0];
 
-  console.log(`${v.bookname} ${v.chapter}:${v.verse}`);
-  console.log(v.text);
   verseOFtheDavy = {
     book: v.bookname,
     chapter: v.chapter,
     verse: v.verse,
     text: v.text,
   };
-  ver;
-  JSONt.tringify(getVerse);
+  document.querySelector(".daily-verses").innerHTML = `
+   
+          <p>
+            "${verseOFtheDavy.text}"
+            <br /><small>— ${verseOFtheDavy.book} ${verseOFtheDavy.chapter}:${verseOFtheDavy.verse}</small>
+          </p>
+  
+  `;
 }
 
 getVerse();

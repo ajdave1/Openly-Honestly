@@ -85,7 +85,7 @@ async function start() {
   } else {
     document.querySelector(".devotion").innerHTML = `
     <div class="notdevotion">
-    <h1> Devotion starts Jan 1, 2026 at 0.00 </h1>
+    <h1> Devotion starts Jan 1, 2026 at 00.00 </h1>
     <p>Don't miss a day !😃 </p> <br>
     <p><i>Stay blessed...</i></p>
 </div>
