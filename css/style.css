@@ -175,8 +175,10 @@ nav ul li:hover {
   border-radius: 14px;
   background-size: cover;
   background-position: center;
-  transition: background-image 2s ease, opacity 1.5s ease;
+
   opacity: 1;
+  transition: opacity 1.5s ease;
+  will-change: opacity;
 }
 
 .books-container {
