@@ -48,7 +48,7 @@ function changeContent() {
 
     // fade in
     textBox.style.opacity = 1;
-  }, 1500); // matches the fade-out duration
+  }, 2000); // matches the fade-out duration
 }
 setInterval(changeContent, 4000);
 const openMenu = document.querySelector(".hamburger");

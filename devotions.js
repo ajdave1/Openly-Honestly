@@ -11,6 +11,24 @@ async function getdevotion() {
   return devotion;
 }
 
+const date = new Date();
+const months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+const todaysdate = months[date.getMonth()] + " " + date.getDate();
+console.log(date.getMonth());
+
 const renderDevotion = (devotion) => {
   const weekTheme = document.querySelector(".week-theme");
   const challenge = document.querySelector(".challenge");
@@ -21,15 +39,15 @@ const renderDevotion = (devotion) => {
 
   devotionHeader.innerHTML = `
  <div class="week-header box">This week-${devotion.week.topic}</div>
-        <h1 class="box todays-date">${Date.now().toLocaleString()}</h1>
+        <h1 class="box todays-date">${todaysdate}</h1>
         <div class="box topic">
-          <strong> Today - </strong> ${devotion.content.topic}
+          <strong> </strong> ${devotion.content.topic}
         </div>
 
 
   `;
   weekTheme.innerHTML = `
-    <h2>Week: Theme</h2>
+    <h2>Theme</h2>
           <p>
           ${devotion.week.thought}
             <br />
