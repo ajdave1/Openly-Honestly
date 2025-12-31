@@ -40,15 +40,11 @@ function changeContent() {
   textBox.style.opacity = 0;
 
   setTimeout(() => {
-    // Change text
     index = (index + 1) % messages.length;
     textBox.textContent = messages[index];
 
-    // Change backgroun
-
-    // fade in
     textBox.style.opacity = 1;
-  }, 2000); // matches the fade-out duration
+  }, 1500); // matches the fade-out duration
 }
 setInterval(changeContent, 4000);
 const openMenu = document.querySelector(".hamburger");
