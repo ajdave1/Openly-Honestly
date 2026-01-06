@@ -36,6 +36,7 @@ const renderDevotion = (devotion) => {
   const todayDevotion = document.querySelector(".today-devotion");
   const reflection = document.querySelector(".reflection");
   const prayer = document.querySelector(".prayer");
+  const declaration = document.querySelector(".declaration");
 
   devotionHeader.innerHTML = `
  <div class="week-header box">This week-${devotion.week.topic}</div>
@@ -94,6 +95,13 @@ const renderDevotion = (devotion) => {
           
           
           `;
+  if (devotion.declaration) {
+    declaration.innerHTML = `
+             <h3>Declaration</h3>
+          <p>
+          ${devotion.declaration}
+          </p>`;
+  }
 };
 
 async function start() {

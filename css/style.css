@@ -80,7 +80,7 @@ nav ul li:hover {
   backdrop-filter: blur(20px);
   border-radius: 18px;
   padding: 32px;
-  max-width: 50%;
+  width: 50%;
   color: white;
   text-align: center;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
@@ -379,6 +379,7 @@ nav ul li:hover {
   }
   .devotion-card {
     max-width: 80%;
+    min-width: 80%;
   }
   .write-ups {
     width: 80%;
