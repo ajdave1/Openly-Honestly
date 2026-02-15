@@ -86,7 +86,8 @@ const renderDevotion = (devotion) => {
           
           
           `;
-  challenge.innerHTML = `
+  if (devotion.challenge) {
+    challenge.innerHTML = `
              <h3>CHALLENGE</h3>
           <p>
           ${devotion.challenge}
@@ -95,6 +96,8 @@ const renderDevotion = (devotion) => {
           
           
           `;
+  }
+
   if (devotion.declaration) {
     declaration.innerHTML = `
              <h3>Declaration</h3>
