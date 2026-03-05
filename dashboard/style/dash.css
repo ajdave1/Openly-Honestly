@@ -1,0 +1,187 @@
+body {
+  font-family: "poppins";
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.hide-item {
+  display: none;
+}
+.view-item {
+  display: block;
+}
+.view-item-flex {
+  display: flex;
+}
+
+.logo {
+  cursor: pointer;
+  font-weight: 700;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Leckerli One", cursive;
+}
+.side-menu {
+  color: white;
+  background-color: #2f4050;
+  height: 100vh;
+  width: 15%;
+  padding: 10px;
+}
+
+.side-menu ul {
+  padding: 40px 0px;
+  list-style: none;
+}
+.side-menu ul li {
+  margin-bottom: 30px;
+}
+.side-menu ul li a {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+.side-menu ul li:hover {
+  background-color: #293846;
+  color: #a7b1c2;
+}
+.side-menu-top {
+  cursor: pointer;
+  gap: 8px;
+  display: flex;
+  align-items: center;
+}
+.container {
+  background-color: rgba(196, 196, 196, 0.383);
+  width: 80%;
+  height: 100vh;
+  padding: 20px;
+}
+.card-rows {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.card {
+  color: whitesmoke;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 250px;
+  background-color: #17b794;
+}
+.card:nth-child(1) {
+  background-color: #17b794;
+}
+
+.card:nth-child(2) {
+  background-color: #9b7fd1;
+}
+
+.card:nth-child(3) {
+  background-color: #1e9cd7;
+}
+
+.card:nth-child(4) {
+  background-color: #f08a6c;
+}
+.card button {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  padding: 3px 15px;
+  border-radius: 3px;
+}
+.card p,
+h4 {
+  width: 100%;
+  margin: 0;
+}
+.card p {
+  font-size: 15px;
+}
+.card h4 {
+  margin-bottom: 5px;
+}
+.create-devotions {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 20px 0px;
+}
+.weekly-topics {
+  border-radius: 8px;
+  width: 30%;
+  background-color: white;
+  padding: 10px;
+}
+.weekly-topics select {
+  padding: 5px;
+  border: none;
+  margin: 5px 0px;
+}
+.daily-devotions {
+  border-radius: 8px;
+  padding: 10px;
+  width: 65%;
+  background-color: white;
+}
+.weekly-topics input,
+.daily-devotions input {
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  background-color: rgb(241, 241, 241);
+  padding: 10px 10px;
+  margin: 8px 0px;
+  border-radius: 5px;
+}
+.weekly-topics input:focus,
+.daily-devotions input:focus {
+  outline: none;
+  border: 1px solid white;
+}
+.daily-devotions button,
+.weekly-topics button {
+  background-color: rgb(41, 68, 84);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px 20px;
+}
+.weekly-topics textarea,
+.daily-devotions textarea {
+  outline: none;
+  background-color: rgb(241, 241, 241);
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  height: 300px;
+  resize: none;
+  margin-bottom: 5px;
+}
+.pop-up-container {
+  background-color: rgba(0, 0, 0, 0.604);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20000;
+  display: none;
+}
+.close-pop-up {
+  position: absolute;
+  top: 40px;
+  font-size: 30px;
+  color: white;
+  left: 20px;
+  cursor: pointer;
+}
+nav {
+  position: absolute;
+}

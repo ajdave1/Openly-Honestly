@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Confirmation Progress</title>
+
+    <style>
+      body {
+        font-family: Arial;
+        background: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        background: white;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        width: 400px;
+        text-align: center;
+      }
+
+      /* progress bar container */
+
+      .progress-container {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        margin-bottom: 40px;
+      }
+
+      /* background line */
+
+      .progress-container::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        height: 4px;
+        width: 100%;
+        background: #ddd;
+        transform: translateY(-50%);
+        z-index: 0;
+      }
+
+      /* animated line */
+
+      .progress {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        height: 4px;
+        width: 0%;
+        background: #28a745;
+        transform: translateY(-50%);
+        z-index: 1;
+        transition: 0.4s ease;
+      }
+
+      /* circles */
+
+      .circle {
+        background: white;
+        border: 3px solid #ddd;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        z-index: 2;
+        transition: 0.4s ease;
+      }
+
+      /* active circle */
+
+      .circle.active {
+        border-color: #28a745;
+        background: #28a745;
+        color: white;
+        transform: scale(1.1);
+      }
+
+      /* input */
+
+      input {
+        padding: 10px;
+        width: 80%;
+        margin-bottom: 10px;
+      }
+
+      button {
+        padding: 10px 20px;
+        background: #28a745;
+        border: none;
+        color: white;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background: #218838;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h2>Confirmation</h2>
+      <input
+        type="text"
+        id="input"
+        placeholder="Enter chain address"
+        style="border-radius: 5px"
+      />
+
+      <br />
+
+      <button onclick="confirmStep()" style="margin-bottom: 5px">
+        Confirm
+      </button>
+
+      <div class="progress-container">
+        <div class="progress" id="progress"></div>
+
+        <div class="circle active">1</div>
+        <div class="circle">2</div>
+        <div class="circle">3</div>
+      </div>
+
+      <p id="message"></p>
+    </div>
+
+    <script>
+      let currentStep = 1;
+
+      const circles = document.querySelectorAll(".circle");
+      const progress = document.getElementById("progress");
+      const input = document.getElementById("input");
+      const message = document.getElementById("message");
+
+      function confirmStep() {
+        if (input.value.trim() === "") {
+          alert("Please enter something");
+          return;
+        }
+
+        currentStep++;
+
+        if (currentStep > circles.length) {
+          message.innerHTML = "All confirmations completed 🎉";
+          input.disabled = true;
+          return;
+        }
+
+        updateProgress();
+
+        input.value = "";
+      }
+
+      function updateProgress() {
+        circles.forEach((circle, index) => {
+          if (index < currentStep) {
+            circle.classList.add("active");
+          } else {
+            circle.classList.remove("active");
+          }
+        });
+
+        const actives = document.querySelectorAll(".active");
+
+        progress.style.width =
+          ((actives.length - 1) / (circles.length - 1)) * 100 + "%";
+      }
+    </script>
+  </body>
+</html>
