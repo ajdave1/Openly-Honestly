@@ -86,7 +86,7 @@
         <li><a href="">Books </a></li>
         <li><a href="">Fellowships </a></li>
         <li><a href="">Settings</a></li>
-        <li><a href="">Sign out</a></li>
+        <li><a href="./login.html">Sign out</a></li>
       </ul>
     </div>
     <div class="container">
@@ -95,24 +95,24 @@
           <p>week 10</p>
           <h4>Topic</h4>
 
-          <button>Edit</button>
+          <button id="edit-buttons" data-edit="week">Edit</button>
         </div>
         <div class="card">
           <p>Today's devotion</p>
 
           <h4>Topic</h4>
-          <button>Edit</button>
+          <button id="edit-buttons" data-edit="devotions">Edit</button>
         </div>
         <div class="card">
           <p>Home page scriptures</p>
           <h4>Scripture</h4>
-          <button>Edit</button>
+          <button id="edit-buttons" data-edit="page-scripture">Edit</button>
         </div>
         <div class="card">
           <p>Texts..</p>
           <h4>Home page text animation texts</h4>
 
-          <button>Edit</button>
+          <button id="edit-buttons" data-edit="home-animation">Edit</button>
         </div>
       </div>
       <div class="create-devotions">
@@ -141,18 +141,18 @@
               <option value="1">18</option>
             </select>
             <br />
-            <input type="text" placeholder=" Enter Year" />
+            <input type="text" placeholder="Year" />
             <br />
-            <input type="text" placeholder=" Enter Topic" />
+            <input type="text" placeholder=" Topic" />
             <br />
-            <input type="text" placeholder="Enter verse" />
+            <input type="text" placeholder="Bible verse" />
             <br />
-            <input type="text" placeholder=" Enter " />
-            <br />
+            <!-- <input type="text" placeholder=" Enter " />
+            <br /> -->
             <textarea
               name="thoughts"
               id="myTextarea"
-              placeholder="thoughts"
+              placeholder="Add thoughts"
             ></textarea>
             <button class="upload-week">Add Week</button>
           </form>
@@ -160,20 +160,21 @@
         <div class="daily-devotions">
           <h4>Add New Devotion</h4>
           <form action="">
-            <input type="text" placeholder=" Enter topic" />
+            <input type="date" placeholder=" date" />
             <br />
-            <input type="text" placeholder=" Enter  verse" />
+            <input type="text" placeholder=" Topic" />
             <br />
-            <input type="text" placeholder=" Enter Topic" />
+            <input type="text" placeholder=" Bible Verse" />
             <br />
-            <input type="text" placeholder="Enter Scripture" />
+            <input type="text" placeholder=" Challenge" />
             <br />
-            <input type="text" placeholder=" Enter Year" />
+            <input type="text" placeholder="Prayer" />
             <br />
+
             <textarea
               name="thoughts"
               id="myTextarea"
-              placeholder="thoughts"
+              placeholder="Type relection"
             ></textarea>
             <button class="upload-week">Add Devotion</button>
           </form>
@@ -183,7 +184,7 @@
 
     <div class="pop-up-container">
       <div class="close-pop-up bx bx-x"></div>
-      <div class="daily-devotions hide-item">
+      <div class="daily-devotions">
         <h4>Edit Devotion</h4>
         <form action="">
           <input type="text" placeholder=" Enter topic" />
@@ -217,12 +218,12 @@
           <br />
           <input type="text" placeholder="Enter verse" />
           <br />
-          <input type="text" placeholder=" Enter " />
+          <input type="date" placeholder=" date" />
           <br />
           <textarea
             name="thoughts"
             id="myTextarea"
-            placeholder="thoughts"
+            placeholder="reflection"
           ></textarea>
           <button class="upload-week">Update</button>
         </form>
@@ -235,5 +236,6 @@
         height: 300,
       });
     </script>
+    <script src="./scripts/dash.js"></script>
   </body>
 </html>
