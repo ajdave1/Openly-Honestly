@@ -110,7 +110,8 @@ h4 {
   flex-wrap: wrap;
   margin: 20px 0px;
 }
-.weekly-topics {
+.weekly-topics,
+.update-weekly-topics {
   border-radius: 8px;
 
   width: 30%;
@@ -122,14 +123,17 @@ h4 {
   border: none;
   margin: 5px 0px;
 }
-.daily-devotions {
+.daily-devotions,
+.update-daily-devotions {
   border-radius: 8px;
   padding: 10px;
   width: 65%;
   background-color: white;
 }
 .weekly-topics input,
-.daily-devotions input {
+.daily-devotions input,
+.update-weekly-topics input,
+.update-daily-devotions input {
   width: 100%;
   box-sizing: border-box;
   border: none;
@@ -144,7 +148,9 @@ h4 {
   border: 1px solid white;
 }
 .daily-devotions button,
-.weekly-topics button {
+.weekly-topics button,
+.update-daily-devotions button,
+.update-weekly-topics button {
   background-color: rgb(41, 68, 84);
   color: white;
   border-radius: 5px;
@@ -152,7 +158,9 @@ h4 {
   padding: 5px 20px;
 }
 .weekly-topics textarea,
-.daily-devotions textarea {
+.daily-devotions textarea,
+.update-weekly-topics textarea,
+.update-daily-devotions textarea {
   outline: none;
   background-color: rgb(241, 241, 241);
   width: 100%;
