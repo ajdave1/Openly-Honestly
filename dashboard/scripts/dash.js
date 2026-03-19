@@ -33,3 +33,16 @@ editButtons.forEach((button) => {
 document.querySelector(".close-pop-up").addEventListener("click", () => {
   editContainer.style = "display:none";
 });
+
+document.getElementById("update-devotion").addEventListener("click", (E) => {
+  window.alert("hey");
+  const prayer = document.querySelector("#prayer-input");
+  const declaration = document.querySelector("#declaration-input");
+  const topic = document.querySelector("#devotion-topic-input");
+  const challenge = document.querySelector("#prayer-input");
+  const reflection = tinymce.get("my-devotion-textarea").getContent();
+  const bible_verse = document.querySelector("#devotion-bible-verse-input");
+
+  console.log(prayer, declaration, topic, challenge, bible_verse);
+  console.log(`THIS IS TINYMCE`, reflection);
+});

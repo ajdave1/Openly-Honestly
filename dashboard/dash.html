@@ -80,14 +80,16 @@
         <div class="logo">O&H</div>
         <strong>Dashboard</strong>
       </div>
-      <ul>
-        <li><a href="">Overview</a></li>
-        <li><a href="./create.html">Devotions</a></li>
-        <li><a href="">Books </a></li>
-        <li><a href="">Fellowships </a></li>
-        <li><a href="">Settings</a></li>
-        <li><a href="./login.html">Sign out</a></li>
-      </ul>
+      <div class="mobile-menu-box">
+        <ul>
+          <li><a href="">Overview</a></li>
+          <li><a href="./create.html">Devotions</a></li>
+          <li><a href="">Books </a></li>
+          <li><a href="">Fellowships </a></li>
+          <li><a href="">Settings</a></li>
+          <li><a href="./login.html">Sign out</a></li>
+        </ul>
+      </div>
     </div>
     <div class="container">
       <div class="card-rows">
@@ -118,7 +120,7 @@
       <div class="create-devotions">
         <div class="weekly-topics">
           <h4>Add New Week</h4>
-          <form action="">
+          <form>
             <select name="week" id="week">
               <option value="Default">select week</option>
               <option value="1">1</option>
@@ -159,7 +161,7 @@
         </div>
         <div class="daily-devotions">
           <h4>Add New Devotion</h4>
-          <form action="">
+          <form>
             <input type="date" placeholder=" date" />
             <br />
             <input type="text" placeholder=" Topic" />
@@ -187,22 +189,34 @@
       <div class="update-daily-devotions">
         <h4>Edit Devotion</h4>
         <form action="">
-          <input type="text" placeholder=" Enter topic" />
+          <input
+            type="text"
+            placeholder=" Enter Topic"
+            id="devotion-topic-input"
+          />
           <br />
-          <input type="text" placeholder=" Enter  verse" />
+          <input
+            type="text"
+            placeholder=" Enter  verse"
+            id="devotion-bible-verse-input"
+          />
           <br />
-          <input type="text" placeholder=" Enter Topic" />
+          <input
+            type="text"
+            placeholder=" Enter Prayer"
+            id="devotion-prayer-input"
+          />
           <br />
-          <input type="text" placeholder="Enter Scripture" />
+          <input
+            type="text"
+            placeholder="Enter Challenge"
+            id="devotion-challlenge-input"
+          />
           <br />
-          <input type="text" placeholder=" Enter Year" />
+          <input type="date" id="devotion-date-input" />
           <br />
-          <textarea
-            name="thoughts"
-            id="myTextarea"
-            placeholder="thoughts"
-          ></textarea>
-          <button class="upload-week">Update</button>
+          <textarea></textarea>
+          <button class="upload-week" id="update-devotion">Update</button>
         </form>
       </div>
       <div class="update-weekly-topics">

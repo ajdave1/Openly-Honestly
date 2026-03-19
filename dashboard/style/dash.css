@@ -1,6 +1,7 @@
 body {
   font-family: "poppins";
   margin: 0;
+  background-color: rgba(196, 196, 196, 0.383);
   padding: 0;
   display: flex;
 }
@@ -52,9 +53,8 @@ body {
   align-items: center;
 }
 .container {
-  background-color: rgba(196, 196, 196, 0.383);
   width: 80%;
-  height: 100vh;
+  height: 100%;
   padding: 20px;
 }
 .card-rows {
@@ -113,7 +113,6 @@ h4 {
 .weekly-topics,
 .update-weekly-topics {
   border-radius: 8px;
-
   width: 30%;
   background-color: white;
   padding: 10px;
@@ -193,4 +192,111 @@ h4 {
 }
 nav {
   position: absolute;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    display: block;
+  }
+  .side-menu {
+    display: flex;
+    height: 8vh;
+    width: 100%;
+  }
+  /* ul {
+    background-color: red;
+    display: none;
+  } */
+  .container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .card-rows {
+    padding: 20px 10px;
+  }
+  .card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .weekly-topics,
+  .daily-devotions {
+    width: 90%;
+    margin-bottom: 30px;
+  }
+  .create-devotions {
+    justify-content: center;
+    align-items: center;
+  }
+  .update-weekly-topics,
+  .update-daily-devotions {
+    width: 80%;
+  }
+
+  .mobile-menu-box {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.42);
+    position: fixed;
+    inset: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    /* opacity: 0; */
+    /* visibility: hidden; */
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+  }
+
+  .mobile-menu-box.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  ul {
+    position: relative;
+    width: 90%;
+    height: 50vh;
+    background-color: rgba(236, 181, 237, 0.15);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-radius: 14px;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease; */
+    box-shadow: 0px 10px 40px rgb(41, 41, 41);
+    outline: 1px solid rgba(204, 0, 255, 0.3);
+  }
+
+  .mobile-menu-box.active ul {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .close-menu {
+    font-size: 40px;
+    color: white;
+    position: absolute;
+    top: 55px;
+    right: 25px;
+  }
+
+  ul li {
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    margin: 20px 0px;
+    color: rgb(222, 222, 222);
+  }
+  ul li:active {
+    font-size: larger;
+  }
 }
