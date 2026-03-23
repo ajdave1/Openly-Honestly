@@ -15,5 +15,4 @@ export const controllers = {
     const data = await allDevotions.json();
     return data;
   },
-  
 };

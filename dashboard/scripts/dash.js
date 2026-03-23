@@ -46,3 +46,12 @@ document.getElementById("update-devotion").addEventListener("click", (E) => {
   console.log(prayer, declaration, topic, challenge, bible_verse);
   console.log(`THIS IS TINYMCE`, reflection);
 });
+
+const mobileMenu = document.querySelector(".mobile-menu-box");
+document.querySelector(".open-side-menu").addEventListener("click", () => {
+  mobileMenu.style = "display:flex";
+});
+
+document.querySelector(".close-side-menu").addEventListener("click", () => {
+  mobileMenu.style = "display:none";
+});
