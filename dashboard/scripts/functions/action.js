@@ -1,6 +1,6 @@
 export const controllers = {
   getdevotions: async () => {
-    const api_url = "https://localhost/openlyandhonestly/devotion_api.php";
+    const api_url = "localhost/openlyandhonestly/devotion_api.php";
 
     const allDevotions = await fetch(api_url, {
       method: "POST",
