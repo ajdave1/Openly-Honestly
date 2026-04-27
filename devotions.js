@@ -115,7 +115,7 @@ async function start() {
     document.querySelector(".devotion").innerHTML = `
     <div class="notdevotion">
     <h1>Out of service...</p> <br>
-    <p>We'll be back soon <i>Stay blessed...</i></p>
+    <p>We'll be back soon. <br/> <i>Stay blessed...</i></p>
 </div>
     `;
   }
