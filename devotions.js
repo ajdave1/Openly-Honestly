@@ -108,14 +108,14 @@ const renderDevotion = (devotion) => {
 };
 
 async function start() {
-  const devotion = await getdevotion();             
+  const devotion = await getdevotion();
   if (devotion) {
     renderDevotion(devotion);
   } else {
     document.querySelector(".devotion").innerHTML = `
     <div class="notdevotion">
-    <h1>Technical Issues ...</p> <br>
-    <p>We apologize for the error <i>Stay blessed...</i></p>
+    <h1>Out of service...</p> <br>
+    <p>We'll be back soon <i>Stay blessed...</i></p>
 </div>
     `;
   }
