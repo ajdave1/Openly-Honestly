@@ -114,8 +114,8 @@ async function start() {
   } else {
     document.querySelector(".devotion").innerHTML = `
     <div class="notdevotion">
-    <h1>...</p> <br>
-    <p>.... <br/> <i>S...</i></p>
+   
+    <p>Have a blessed ${todaysdate}</p>
 </div>
     `;
   }
