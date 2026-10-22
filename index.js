@@ -1,5 +1,5 @@
 const messages = [
-  "God is with you every step of the way.",
+  "Jesus has your back.",
   "You are not forgotten — God knows your name.",
   "Even when life feels heavy, God carries you.",
   "God's timing is perfect, even when it feels slow.",
@@ -8,7 +8,7 @@ const messages = [
 
 async function getVerse() {
   const res = await fetch(
-    "https://labs.bible.org/api/?passage=random&type=json"
+    "https://labs.bible.org/api/?passage=random&type=json",
   );
   const data = await res.json();
   const v = data[0];
